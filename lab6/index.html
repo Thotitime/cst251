@@ -27,13 +27,91 @@
 Click on this picture for surprise
 	</div>
 
-<input class =""name"coucou">
-<select class="" name="">
-<textarea class=""	name="">
-	 
-</select>
+<div>
 
+	<form>
+<fieldset>
+	 <legend>Vos coordonnées</legend> <!-- Titre du fieldset -->
 
+	 <label for="nom">Quel est votre nom ?</label>
+	 <input type="text" name="nom" id="nom" />
 
+	 <label for="prenom">Quel est votre prénom ?</label>
+	 <input type="text" name="prenom" id="prenom" />
+
+	 <label for="email">Quel est votre e-mail ?</label>
+	 <input type="email" name="email" id="email" />
+		<p>
+	 Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br />
+	 <input type="radio" name="age" value="moins15" id="moins15" /> <label for="moins15">Moins de 15 ans</label><br />
+	 <input type="radio" name="age" value="medium15-25" id="medium15-25" /> <label for="medium15-25">15-25 ans</label><br />
+	 <input type="radio" name="age" value="medium25-40" id="medium25-40" /> <label for="medium25-40">25-40 ans</label><br />
+	 <input type="radio" name="age" value="plus40" id="plus40" /> <label for="plus40">Encore plus vieux que ça ?!</label>
+</p>
+<p>
+Vous êtes :
+	 <input type="checkbox"
+name="nom_variable_1"
+value="choix1"> Fort
+<input type="checkbox"
+name="nom_variable_2"
+value="choix2"> Intelligent
+<input type="checkbox"
+name="nom_variable_3"
+value="choix3"> Courageux
+<input type="checkbox"
+name="nom_variable_4"
+value="choix4"> Beau
+<input type="checkbox"
+name="nom_variable_5"
+value="choix5"> Modeste
+
+</p>
+<p>
+	Votre langue native est :  <select name="Langue">
+								<option value=””>Français</option>
+								<option value=””>English</option>
+								<option value=””>Deutsch</option>
+								<option value=””>Español</option>
+								<option value=””></option
+						</select>
+</p>
+	 <form method="post" action="traitement.php">
+<p>
+<P> </P>
+		<label for="pseudo">Votre pseudo :</label>
+		<input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10" />
+	 <br />
+	 <label for="pass">Votre mot de passe :</label>
+	 <input type="password" name="pass" id="pass" />
+</p>
+
+</fieldset>
+
+</form>
+<form>
+<fieldset>
+	 <legend>Expérience client</legend> <!-- Titre du fieldset -->
+
+	 <p>
+			 Comment s'est passé votre expérience dans le magasin :
+
+			 <input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Satisfaisant</label>
+			 <input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Acceptable</label>
+			 <input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Insuffisant </label>
+			 <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+	 </p>
+
+	 <p>
+			 <label for="precisions">Si "Autre", veuillez préciser :</label>
+			 <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+	 </p>
+</fieldset>
+<fieldset>
+		<input type="submit" value="Envoyer" />
+		</fieldset>
+</form>
+
+</div>
 </body>
 </html>
