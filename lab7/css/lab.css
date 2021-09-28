@@ -17,14 +17,14 @@ div#problems {
   padding: 50px;
   border: solid 1px currentcolor;
 height: 20vh;
-}
+                      }
 
 div#images {
   padding: 50px;
   color: cyan;
   border: solid 1px currentcolor;
-height: 20vh;
-
+height: 100vh;
+}
 
 
 h1, h2, h3 {
