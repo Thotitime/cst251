@@ -1,0 +1,38 @@
+body {
+  font-family: Helvetica, Verdana, Arial, "san serif";
+  background-color: darkgray;    padding: 25px;
+  font-size: 120%;
+          }
+
+
+div#challenges {
+  padding: 50px;
+  color: blue;
+  border: solid 1px currentcolor;
+  height: 80vh;
+
+                }
+div#problems {
+  color : darkblue
+  padding: 50px;
+  border: solid 1px currentcolor;
+  height: 80vh;
+                      }
+
+div#images {
+  padding: 50px;
+  color: cyan;
+  border: solid 1px currentcolor;
+  height: 80vh;
+
+
+
+h1, h2, h3 {
+  font-family: "Courier New", monospace;
+  }
+
+  img {
+
+    width: 400px;
+    height: auto;
+            }

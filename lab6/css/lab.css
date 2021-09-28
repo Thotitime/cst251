@@ -20,13 +20,13 @@ h1, h2, h3 {
     height: auto;
             }
 
-a {
-  text-decoration: none;
-  color: maroon;
-  }
+            a {
+              text-decoration: none;
+              color: maroon;
+              }
 
-a:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy;
+            a:hover {
+              text-decoration: underline;
+              text-decoration-style: wavy;
 
-}
+            }
