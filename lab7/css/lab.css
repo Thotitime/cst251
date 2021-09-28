@@ -5,26 +5,23 @@ body {
           }
 
 
-div#challenges {
-  padding: 50px;
-  color: blue;
-  border: solid 1px currentcolor;
+div#Challenges {
+  color: blue
+  border: 1px solid  currentcolor;
+  padding: 2px;
 }
 
-                }
-div#problems {
-  color : darkblue
-  padding: 50px;
-  border: solid 1px currentcolor;
-
-                      }
-
-div#images {
+div#Images {
   padding: 50px;
   color: cyan;
-  border: solid 1px currentcolor;
+  border: 1px  solid currentcolor;
 }
 
+div#Problems {
+  padding: 50px;
+  color: darkgray;
+  border: 1px  solid currentcolor;
+}
 
 
 h1, h2, h3 {
