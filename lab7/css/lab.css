@@ -9,21 +9,21 @@ div#challenges {
   padding: 50px;
   color: blue;
   border: solid 1px currentcolor;
-  height: 80vh;
+  height: 20vh;
 
                 }
 div#problems {
   color : darkblue
   padding: 50px;
   border: solid 1px currentcolor;
-  height: 80vh;
+
                       }
 
 div#images {
   padding: 50px;
   color: cyan;
   border: solid 1px currentcolor;
-  height: 80vh;
+
 
 
 
@@ -33,6 +33,6 @@ h1, h2, h3 {
 
   img {
 
-    width: 400px;
+    width: 1000px;
     height: auto;
             }
