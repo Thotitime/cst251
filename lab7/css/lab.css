@@ -6,9 +6,15 @@ body {
 
 
 div#Challenges {
-  color: blue
+  padding: 50px;
+  color: blue;
   border: 1px solid  currentcolor;
-  padding: 2px;
+
+}
+div#Problems {
+  padding: 50px;
+  color: darkblue;
+  border: 1px  solid currentcolor;
 }
 
 div#Images {
@@ -17,11 +23,7 @@ div#Images {
   border: 1px  solid currentcolor;
 }
 
-div#Problems {
-  padding: 50px;
-  color: darkgray;
-  border: 1px  solid currentcolor;
-}
+
 
 
 h1, h2, h3 {
