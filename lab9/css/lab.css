@@ -1,0 +1,110 @@
+
+
+/* Comments in CSS files look like this */
+
+/* CSS file for index.html */
+
+/* General CSS formatting */
+
+
+
+
+html {
+  font-family:      Verdana, sans-serif;
+  font-size:        15px;
+  line-height:      1.5;
+  color : white;
+  /* colors can be specified by name, or by "hex value" */
+
+  background-image: url("../img/frenchflag.jpg");
+}
+
+h1, h2, h3 {
+  /* We provide a fallback font-family in case Verdana is not found on a user's system */
+  font-family: Times New Roman, serif;
+  color: green;
+  text-transform: uppercase;
+  /* sets the top, right, bottom, and left padding to 0 */
+  padding: 0;
+  /* we can specify a particular margin */
+  margin-bottom: 5px;
+}
+
+
+
+
+.paragraphe {
+  /*width:100%;
+  text-align: right;*/
+  color : darkblue
+  position: relative;
+  top: -15px;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 75%;
+}
+
+
+
+div#Challenges {
+  padding: 50px;
+  color: red;
+
+}
+
+div#Problems {
+  padding: 50px;
+  color: yellow;
+
+}
+
+div#Images {
+  padding: 50px;
+  color: cyan;
+
+}
+
+
+div#Results {
+  padding: 50px;
+  color: orange;
+
+}
+
+
+
+
+/* when an element is referenced by id, it starts with a #-sign */
+#France {
+  float: right;
+  /* units can be specified in pixels */
+  width: 600px;
+  lenght: auto ;
+  /* if we don't specify which margin, it applies to top, bottom, left, & right */
+  margin: 10px;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+#France img:hover {
+  transform: scale(600%) translate(-20px, 45px) rotateX(50deg) rotateZ(180deg);
+  transition: all 2s ease-in;
+}
+#France img {
+  transition: all 3s ease-out;
+}
+
+
+a {
+  /* turns off underlining links */
+  text-decoration: none;
+  text-transform: uppercase;
+  /* same as #808080 */
+  color: #888;
+  font-weight: bold;
+  /* set font-size at 90% of default */
+  font-size: 90%;
+}
