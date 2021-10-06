@@ -16,7 +16,7 @@ html {
   color : white;
   /* colors can be specified by name, or by "hex value" */
 
-  background-image: url("../img/frenchflag.jpg");
+  background-color: darkgray;
 }
 
 h1, h2, h3 {
