@@ -59,10 +59,12 @@ div#Problems {
 
 }
 
-div#Images {
+
+div#Imagesparagraphe {
   padding: 50px;
   color: cyan;
-
+  float: left;
+  clear: left;
 }
 
 
@@ -107,4 +109,42 @@ a {
   font-weight: bold;
   /* set font-size at 90% of default */
   font-size: 90%;
+}
+
+
+
+div#images{
+  width: 150px;
+  height: 100px;
+}
+
+div{
+  width:30%;
+}
+
+div#floated{
+  float:right;
+}
+
+div#center-horz{
+  text-align: center;
+}
+
+div#center-img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 100px;
+
+}
+
+div#center-both{
+  position: relative;
+   top: 50%;
+   left: 50%;
+   margin-top: -50px;
+   margin-left: -50px;
+   width: 150px;
+   height: 100px;
+
 }
