@@ -1,9 +1,8 @@
 html {
-
-
   background-image: url("../img/Paris.jpg");
    background-size: cover;
 }
+
 div#bigtext {
   font-size: 1500%;
   font-family: 'Bebas Neue' , cursive;
@@ -24,14 +23,9 @@ div#smalltext {
   line-height:      1.5;
   color : white;
 
-
-
 }
 a {
-  /* turns off underlining links */
   text-decoration: none;
-
-  /* same as #808080 */
   color: black ;
   font-weight: bold;
   /* set font-size at 90% of default */
@@ -39,17 +33,12 @@ a {
 }
 
 nav#links1 {
-
   position:fixed;
     top:10px;
     left: :10px;
-
-
 }
     nav#links2 {
-
       position:fixed;
-
         top:10px;
         right: 10px;
 
