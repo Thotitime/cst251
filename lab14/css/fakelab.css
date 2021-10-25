@@ -1,0 +1,99 @@
+html {
+  background-color: #f4ebd3;
+   background-size: cover;
+}
+
+div#bigtext {
+  font-size: 1500%;
+  font-family: 'Bebas Neue' , cursive;
+  margin-top: 75px;
+  margin-left: 25px;
+
+}
+div#bigtext2 {
+  font-size: 1500%;
+  font-family: 'Bebas Neue' , cursive;
+  margin-top: 75px;
+  margin-left: 25px;
+
+}
+
+
+.title {
+  font-size: 300%;
+  font-family: 'Bebas Neue' , cursive;
+  position: absolute;
+  top: 25%; left:30%;
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+ul{
+  padding:0;
+
+  list-style:none;
+}
+
+li{
+  float:right;
+  font-family: "GT-America", sans-serif;
+  font-weight: bold;
+}
+
+
+.imagerobinet {
+  height: 250px;
+  width: 200px;
+}
+
+
+div#smalltext {
+  position: absolute;
+   left: 40%;
+   top: 65%;
+
+   width: 300px;
+   height: 100px;
+  font-family:      "Sofia", sans-serif;
+  font-size:        15px;
+  line-height:      1.5;
+  color : black;
+
+}
+a {
+  text-decoration: none;
+  color: black ;
+  font-weight: bold;
+    font-family: "GT-America", sans-serif;
+  /* set font-size at 90% of default */
+  font-size: 90%;
+  width: 75px;
+ display:block;
+ margin-top: 15px;
+ margin-right: 10px;
+ padding: 20px 0px;
+}
+
+nav#links1 {
+  position:fixed;
+    top:10px;
+    left: :10px;
+}
+    nav#links2 {
+      position:fixed;
+        top:10px;
+        right: 10px;
+
+      }

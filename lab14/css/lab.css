@@ -10,7 +10,7 @@
 
 
 html {
-  font-family:      "Sofia", sans-serif;
+  font-family:      Verdana, sans-serif;
   font-size:        15px;
   line-height:      1.5;
   color : white;
@@ -21,7 +21,7 @@ html {
 
 h1, h2, h3 {
   /* We provide a fallback font-family in case Verdana is not found on a user's system */
-  font-family: "Audiowide" , serif;
+  font-family: Times New Roman, serif;
   color: green;
   text-transform: uppercase;
   /* sets the top, right, bottom, and left padding to 0 */
@@ -59,11 +59,7 @@ div#Problems {
 
 }
 
-div#Images {
-  padding: 50px;
-  color: cyan;
 
-}
 
 
 div#Results {
@@ -97,6 +93,12 @@ div#Results {
   transition: all 3s ease-out;
 }
 
+iframe#fake {
+    width: 800px;
+    height: 500px;
+    resize: both;
+    overflow: hidden;
+}
 
 a {
   /* turns off underlining links */
