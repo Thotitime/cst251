@@ -27,6 +27,16 @@ header {
     font-style: italic;
 }
 
+header {
+
+    padding: 1%;
+    color: blue;
+    background-color: rgb(133, 133, 247);
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: impact, fantasy;
+    font-style: italic;
+}
 footer {
     background-color: rgb(215, 215, 250);
 

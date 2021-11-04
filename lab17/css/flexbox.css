@@ -1,13 +1,7 @@
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-
 html{
   text-align: center;
 }
+
 body {
 
     border: 3px
@@ -15,9 +9,13 @@ body {
     background-color: rgb(170, 170, 184);
     image-rendering: 10%;
 }
+
+
+
 h1 {
     text-decoration: underline;
 }
+
 header {
 
     padding: 1%;
@@ -36,20 +34,28 @@ footer {
     font-variant: small-caps;
     font-size: 20px;
 }
-aside {
 
-    margin: auto;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
-aside > img {
+
+
+ #img1  {
+  float: left;
+  margin-left: 50px;
     width: 150px;
     height: 150px;
 }
+
+ #img2  {
+  float: right;
+  margin-right: 50px;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+
+
 
 nav {
   /* turns off underlining links */

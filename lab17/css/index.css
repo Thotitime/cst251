@@ -1,0 +1,89 @@
+
+html {
+  font-family:      "Sofia", sans-serif;
+  font-size:        15px;
+  line-height:      1.5;
+  color : white;
+
+    background: linear-gradient(90deg, rgba(250,0,0,1) 0%, rgba(250,0,250,1) 35%, rgba(0,0,255,1) 100%);
+
+
+}
+
+h1, h2, h3 {
+  /* We provide a fallback font-family in case Verdana is not found on a user's system */
+  font-family: "Audiowide" , serif;
+  color: green;
+  text-transform: uppercase;
+  /* sets the top, right, bottom, and left padding to 0 */
+  padding: 0;
+  /* we can specify a particular margin */
+  margin-bottom: 5px;
+  text-shadow: 3px 3px 5px pink;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+aside {
+  float: right;
+  margin-right: 30px;
+  
+}
+aside > img{
+  height: 220px;
+  width: 220px;
+
+  box-shadow: 5px 5px 15px green;
+}
+
+
+.paragraphe {
+  /*width:100%;
+  text-align: right;*/
+  color : darkblue
+  position: relative;
+  top: -15px;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 75%;
+}
+
+
+
+div #Pika{
+  column-count: 2;
+  column-rule-style: solid;
+  column-gap: 40px;
+}
+
+
+a {
+  /* turns off underlining links */
+  text-decoration: none;
+  text-transform: uppercase;
+  /* same as #808080 */
+  color: #888;
+  font-weight: bold;
+  /* set font-size at 90% of default */
+  font-size: 90%;
+}
