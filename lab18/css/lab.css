@@ -19,7 +19,7 @@ h1 {
     text-decoration: underline;
 }
 header {
-
+border-style: solid;
     padding: 1%;
     color: blue;
     background-color: rgb(133, 133, 247);
@@ -31,13 +31,13 @@ header {
 
 footer {
     background-color: rgb(215, 215, 250);
-
+    border-style: solid;
     font-family: monospace, fantasy;
     font-variant: small-caps;
     font-size: 20px;
 }
 aside {
-
+border-style: solid;
     margin: auto;
     object-fit: cover;
     display: block;
@@ -53,6 +53,7 @@ aside > img {
 
 nav {
   /* turns off underlining links */
+  border-style: solid;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
