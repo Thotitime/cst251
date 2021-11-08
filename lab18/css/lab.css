@@ -43,14 +43,29 @@ border-style: solid;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 300px;
+
 }
 
-aside > img {
-    width: 150px;
-    height: 150px;
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+
 }
 
+.box {
+  width: 300px;
+
+
+}
+
+img {
+  width: 290px;
+  height: 290px;
+}
 nav {
   /* turns off underlining links */
   border-style: solid;
