@@ -1,66 +1,109 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lab 10 - Styling Text Elements   </title>
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
+
+	<title>Lab 19 - CSS Framework </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </head>
+
+<header>
+	<p>LAB 19 - CSS Framework</p>
+</header>
+<nav class="navbar navbar-expand-sm bg-light justify-content-center ">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#"> Link 1 </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>
+
+</nav>
+
 <body>
-	<header> <h1> Styling Text Elements  </h1> </header>
-<p> This is Thibaut Labatut's work for lab 10 </p>
 
-<div id = "France">
+		<main>
+	<div class="container">
+<div id ="content" >
 
-		<img  src="img/Thibaut_Small.PNG"   >
+
+
+
+
+	<div class="row">
+
+	  <div class="col-sm-4">
+			<section id="challenge">
+
+				<h1> Challenge </h1>
+				<p>This Lab is about CSS Framework </p>
+			</section>
+		</div>
+
+
+	  <div class="col-sm-4">
+		<section id="problems">
+
+				<h1> Problems </h1>
+				<p> I didn't get any problem for this lab </p>
+		</section>
 </div>
 
-<div id = "Challenges">
-	<h2> Text time : Challenges </h2>
-<p class="paragraphe"> The challenge here was to create a page with Styling Elements </p>
+
+
+	  <div class="col-sm-4">
+
+			<section id="results">
+
+					<h1> Results </h1>
+					<p>The Result is good.</p>
+			</section>
+	 </div>
+	</div>
+
+
 
 
 </div>
-
-<div id = "Problems">
-<h2> Text time : Problems </h2>
-<p class="paragraphe">I didn't encounter any problem for doing this homework </p>
+</div>
+</main>
 
 
+<aside>
+	<div class="flex">
+  <div class="box">		<img src="img/Thibaut_Small.PNG" alt="moi"> </img>		 </div>
+  <div class="box">			<img src="img/400.png" alt="castorno"></img>	 </div>
+  <div class="box">		 	<img src="img/meme.jpg" alt="meme"></img> 	 </div>
 </div>
 
 
-<div id = "Results">
-<h2> Text time : Results </h2>
-<p class="paragraphe">This homework looks good :) </p>
+</aside>
+
+	<br><br>
+	<footer>
+
+		I'm Thibaut Labatut, a French student, and i don't know what to talk about. To contact me : tlabatut@csumb.edu
+		<nav>
+	<a href= "../index.html">Back Home</a>
 
 
-</div>
-<div id = "Images">
+	</nav>
+	</footer>
 
-<h2> Text time : Images </h2>
-<p class="paragraphe"> Here are the images of my work </p>
-<br> </br>
-<a href="../index.html">	<img src="img/Image1.JPG" alt = "Photo1" height = 250, width = "400" >
-
-</img></a>
-<br> </br>
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">	<img src="img/Image2.JPG" alt = "Photo2" height = 250, width = "400" >
-
-</img></a>
-<p class="paragraphe"> I aslo did the bonus task and add some google fonts </p>
-<br> </br>
-	<img src="img/Image3.JPG" alt = "Photo2" height = 250, width = "400" > </img>
-
-</div>
-
-<br> </br>
-If you don't like this, french army will come to search you!
-<br> </br>
-And if you are not scared of the french army click that
-<br> </br>
-<a href="https://www.youtube.com/watch?v=QJwIsBoe3Lg"> Are you brave ? </a>
 
 </body>
 </html>

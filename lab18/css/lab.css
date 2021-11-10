@@ -3,8 +3,6 @@
     background-color: lightblue;
   }
 }
-
-
 html{
   text-align: center;
 }
@@ -28,7 +26,6 @@ border-style: solid;
     font-family: impact, fantasy;
     font-style: italic;
 }
-
 footer {
     background-color: rgb(215, 215, 250);
     border-style: solid;
@@ -46,20 +43,13 @@ border-style: solid;
     width: 300px;
 
 }
-
-
-
 .flex {
   display: flex;
   flex-direction: column;
-
-
 }
 
 .box {
   width: 300px;
-
-
 }
 
 img {
