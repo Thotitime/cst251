@@ -1,0 +1,569 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color:slateblue; border-color: black; border-radius: 30px'>\n",
+    "    <hr><h1 style =\"margin-right: 85px; text-align: center; line-height: 29px\">TP Noté - Introduction au langage Python<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15 décembre 2021</h1><img style=\"margin-top: -77px\" src=\" data:image/png;base64,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\" align=\"right\" alt=\"logo esme\"  height=\"70\" > <hr>\n",
+    "    <blockquote><em>« Ici vous ne travaillez pas, vous êtes là pour subir la connaissance »</em></blockquote>&nbsp;&nbsp;<i style=\"font-size: 11px\">Docteur Hagbe</i>\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Nom:**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Prénom:**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Classe:** SUPF"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateBlue ; border-radius: 30px; border-color: black; '>\n",
+    "    <hr><h2>Consignes : </h2>    <hr>\n",
+    "    <ul>\n",
+    "        <li>Vous disposez de 1 heure 30 pour réaliser ce TP ;</li>\n",
+    "        <li><strong style=\"color:#00FFFF\">Aucun document n'est autorisé et toute connexion à internet est strictement interdite ;</strong></li>\n",
+    "        <li><b>N'oubliez pas d'écrire votre nom et prénom et classe juste en haut et de sauvegarder ce notebook avec <strong style=\"color: #00FFFF\"><em>\"NOM_Prenom_TP2.ipynb\"</em></strong> </b></li><br>\n",
+    "        <li>Les  exercices suivants sont indépendants :</li>\n",
+    "        <ul>\n",
+    "            <li><a href=\"#Question-de-cours\" style=\"color:#00FF44\" >Questions de cours</a></li>\n",
+    "            <li><a href=\"#Exercice-1-:-Construire-une-fonction\" style=\"color:#00FF44\">Exercice 1 - Construire une fonction</a></li>  \n",
+    "            <li><a href=\"#Exercice-2-:-Fonctions-en-cascade\" style=\"color:#00FF44\">Exercice 2 - Fonctions en cascade</a></li>\n",
+    "            <li><a href=\"#Exercice-03---Recherche-d'%C3%A9l%C3%A9ments\" style=\"color:#00FF44\">Exercice 3 - Recherche d'éléments</a></li>\n",
+    "            <li><a href=\"#Exercice-4-:-Produit-it%C3%A9ratif,-produit-r%C3%A9cursif\" style=\"color:#00FF44\">Exercice 4 - Produit itératif, produit récursif</a></li>\n",
+    "        </ul><br>\n",
+    "        <li>Sauvegardez régulièrement votre travail !</li>\n",
+    "        <li>A la fin de l'examen, envoyez votre notebook à partir du lien fourni par votre enseignant ou copiez le sur une clé usb et remettez la à votre surveillant.</li><br>\n",
+    "    </ul>\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    <hr><h2>Question de cours</h2><hr>    \n",
+    "   \n",
+    "1. Quelle est la différence entre la **définition d'une fonction** et **l'appel d'une fonction** en python ? Donnez un exemple\n",
+    "  \n",
+    " </div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Entrez vos explications ici_"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE EXEMPLES ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "2. Dans la cellule de code ci-dessous, copiez-collez le code suivant, indentez le correctement et remplissez les points d'interrogation pour qu'il affiche\n",
+    "\n",
+    "```\n",
+    "4 4 2\n",
+    "4 3 1\n",
+    "4 5 1\n",
+    "```\n",
+    "\n",
+    "Voici le code :\n",
+    "\n",
+    "```python\n",
+    "def test():\n",
+    "b = 4\n",
+    "c = 2\n",
+    "print(a,b,c)\n",
+    "a = 4\n",
+    "b = ?\n",
+    "test()\n",
+    "c = 1\n",
+    "print(a,b,c)\n",
+    "b = ?\n",
+    "print(a,b,c)\n",
+    "```\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "2. Qu'est-ce qu'une variable globale ? Qu'est-ce qu'une variable locale ?\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Entrez votre réponse ici_"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "3. Dans le code précédent identifiez :\n",
+    "\n",
+    "    - Les variables globales\n",
+    "    - Les variables locales\n",
+    "    - Les variables qui se servent du même nom pour décrire une variable globale et une variable locale\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Entrez votre réponse ici_"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "4. En python comment définir une fonction avec des **paramètres optionnels** ? Donnez un exemple ou vous appellerez votre fonction en remplissant les **paramètres optionnels** et un autre exemple où vous appellerez votre fonction en les ommettant.\n",
+    "\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Entrez votre réponse ici_"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOS EXEMPLES ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "deletable": false
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    <hr><h2>Exercice 1 : Construire une fonction</h2><hr>\n",
+    "\n",
+    "1. Ecrire une fonction `a_plus_b(a,b)` qui additionne deux valeurs a et b données en paramètres et qui renvoie le résultat.\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "2. Ecrire une fonction `a_moins_b(a,b)` qui soustrait deux valeurs a et b données en paramètres et qui renvoie le résultat.\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "   \n",
+    "   3. Ecrire une fonction `a_carre_moins_b_carre(a, b)` en veillant à appeler les deux fonctions précédentes pour calculer et renvoyer le résultat.\n",
+    "   \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    <hr><h2>Exercice 2 : Fonctions en cascade</h2><hr>\n",
+    "\n",
+    "Définissez une fonction `aireSphere(r)`. \n",
+    "\n",
+    "Cette fonction doit renvoyer la surface (l'aire) d'une sphère dont on lui a fourni le rayon `r` en argument. Par exemple, l'exécution de l'instruction :\n",
+    "_print(aireSphere(2))_ doit donner le résultat 50.265 (à peu près !)\n",
+    "\n",
+    "> Indication : pour la valeur de pi on pourra prendre 3.14 ou faire `from math import pi` avant de se servir de `pi` comme d'une variable. On rappelle que si `r` est le rayon de la sphère, l'aire est égale à $4 \\pi r^{2}$\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "   \n",
+    "2. Définissez une fonction `minimum(n1,n2,n3)` qui renvoie le plus petit des 3 nombres n1, n2, n3 fournis en arguments. Par exemple, l'exécution de l'instruction : _print(minimum(2,5,4))_ doit donner le résultat : _2_.\n",
+    "   \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "   \n",
+    "3. Définissez une fonction `changeCar(chaine,ca1,ca2)` qui remplace tous les caractères `ca1` par des caractères `ca2` dans la chaîne de caractères _chaine._\n",
+    "\n",
+    "> Le recours à la fonction python _str.replace()_ ou à toute fonction équivalente est interdit. \n",
+    "\n",
+    "Exemples de la fonctionnalité attendue : \n",
+    "\n",
+    "```python\n",
+    "phrase = 'Ceci est une toute petite phrase.' \n",
+    "print(changeCar(phrase, ' ', '*')) # Ceci*est*une*toute*petite*phrase. \n",
+    "print(changeCar(phrase, 'i', 'o')) # Ceco est une toute petote phrase. \n",
+    "```\n",
+    "   \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    \n",
+    "   <hr><h2>Exercice 03 - Recherche d'éléments</h2><hr>\n",
+    "        \n",
+    "<b><u>Attention :</b></u> Dans le cadre de cet exercice, le recours à des fonctions natives de python est interdit. Vous devez implémenter vous-même chacune des fonctions demandées.\n",
+    "    <ol>\n",
+    "        <li>Écrivez une fonction `cherche()` prenant en entrée un élément `x` et une liste `L`, et renvoyant `True` ou `False` selon que `x` est présent ou non dans `L`.\n",
+    "       </li>\n",
+    "    </ol>\n",
+    "Exemples d'appels:\n",
+    "```python\n",
+    "cherche(3,[3,4,1])\n",
+    ">>> True\n",
+    "\n",
+    "cherche(0,[3,4,1])\n",
+    ">>> False\n",
+    "```\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    \n",
+    "   <ol start=\"2\">\n",
+    "    <li>Écrivez une fonction <code>where()</code> prenant en entrée un élément <code>x</code> et une liste <code>L</code> et renvoyant :</li>\n",
+    "        <ul>\n",
+    "            <li>la première position de <code>x</code> dans <code>L</code> si <code>x</code> est présent ;</li>\n",
+    "            <li><code>None</code> sinon.</li>\n",
+    "        </ul>\n",
+    "    </ol>\n",
+    "\n",
+    "Exemple d'appels:\n",
+    "```python\n",
+    "where(3,[0,1,3,6])  \n",
+    ">>> 2\n",
+    "    \n",
+    "where(5,[0,1,3,6])\n",
+    ">>> None\n",
+    "```\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "    <hr><h2>Exercice 4 : Produit itératif, produit récursif</h2><hr>\n",
+    "\n",
+    "1. Ecrire une fonction `produit(n,p)` qui renvoie le produit des valeurs de 1 à _n_ élevées à la puissance _p_ :\n",
+    "\n",
+    "$$\n",
+    "produit(n,p) = \\prod\\limits_{i=1}^n i^p \n",
+    "$$\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "2. Etablir la relation de récurrence qui existe entre `produit(n,p)` et `produit(n-1,p)`\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Entrez votre réponse ici_"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "2. Quelle est le cas d'arrêt ? Quelle valeur renvoie ce cas d'arrêt ?\n",
+    " \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "_Votre réponse ici_"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '>\n",
+    "\n",
+    "3. En déduire une version récursive de la fonction `produit(n,p)`\n",
+    " \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# VOTRE CODE ICI"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-info\" style='color:white; background-color: slateblue ; border-radius: 30px; border-color: black; '><hr>\n",
+    "<p style=\"text-align: center\">\n",
+    "<b>Une fois l'épreuve terminée, sauvegardez votre notebook en cliquant sur l'icône de la disquette en haut à gauche : <img src=\" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHpSURBVFhH7ZbPK0RRFMe/nqZRZhiZJoPYygbNyz9ghUyZIllQkgVFI7IUa2pmirJAUbI2JAtlY2etjJpi8QbJ+FVkvPfcMSfEDPfe0Czm8zp1z73n1bf7vu908nRdNxVFQbZgGAbyTAblWUP2XNEHcqJ4EfJU4u4Cl/c6ZZnJtznhslsoE4df1NkKerwhHBqUf4uC4sZRLAW7UC2hjf/z3cZxbZTBFwrDr9IeofrDCIdZhHwoY49vvB8VhzPoHVrHSYKKBBD0lIJCpxsOK6WE1eGG283CWcgqWE3DABbnB1EVkRP2Z0a31Pa9CxvbwhXt8/C7op51fLTcq7DZdlj3F7AaoU0OpERVlpfSKsX+pApVZdGzhjPYYC+iA4bFU48aaIge0wYPyb+Pi6OA2eZpMwNHbP10a55rmqmli6uHVP0bm+awx2MOb1LKgdzns9jhSho7XZQUUJE8kp5K4O4ihljsu4jjkapF4W+ekSC83btoWttA87YX3asaHWTG1hLC3nQcI+okMHWAYCsd/IDUTR1HmSDVn2qYGSLZYO9v4vSGGPItwepI7ymKzw1WBHlRf0hWiuI3enQOvs5lnFIqRik6FncwUUfpDwjMU8k2cAmOceor+TY4XXbwTjFCQ95/kTM6LzlRfAAvCjw4MJN4hgcAAAAASUVORK5CYII=\" width=\"24\" height=\"24\" style=\"display: inline\"> <br></p>\n",
+    "    \n",
+    "<p style=\"text-align: center\">Renommez le en <span style=\"color: chartreuse\">NomDeFamille_Prenom_TP2.ipynb</span>.&nbsp;<b>A la fin de l'examen, uploadez le à partir du lien fourni par votre enseignant.</b></p>\n",
+    "</div>"
+   ]
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Format de la Cellule Texte Brut",
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  },
+  "latex_envs": {
+   "LaTeX_envs_menu_present": true,
+   "autoclose": false,
+   "autocomplete": true,
+   "bibliofile": "biblio.bib",
+   "cite_by": "apalike",
+   "current_citInitial": 1,
+   "eqLabelWithNumbers": true,
+   "eqNumInitial": 1,
+   "hotkeys": {
+    "equation": "Ctrl-E",
+    "itemize": "Ctrl-I"
+   },
+   "labels_anchors": false,
+   "latex_user_defs": false,
+   "report_style_numbering": false,
+   "user_envs_cfg": false
+  },
+  "varInspector": {
+   "cols": {
+    "lenName": 16,
+    "lenType": 16,
+    "lenVar": 40
+   },
+   "kernels_config": {
+    "python": {
+     "delete_cmd_postfix": "",
+     "delete_cmd_prefix": "del ",
+     "library": "var_list.py",
+     "varRefreshCmd": "print(var_dic_list())"
+    },
+    "r": {
+     "delete_cmd_postfix": ") ",
+     "delete_cmd_prefix": "rm(",
+     "library": "var_list.r",
+     "varRefreshCmd": "cat(var_dic_list()) "
+    }
+   },
+   "types_to_exclude": [
+    "module",
+    "function",
+    "builtin_function_or_method",
+    "instance",
+    "_Feature"
+   ],
+   "window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
